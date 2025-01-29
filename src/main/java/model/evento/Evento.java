@@ -73,8 +73,7 @@ public class Evento {
             throw new RuntimeException("ingressos não foram configurados para este evento.");
         }
 
-        Ingresso ingressoGerado = this.ingressos.emitirIngresso(cliente, this);
-        return ingressoGerado;
+        return this.ingressos.emitirIngresso(cliente, this);
     }
 
     public String getTitulo() {
