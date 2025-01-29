@@ -62,4 +62,9 @@ public class Cliente {
         Cliente  cliente = (Cliente) obj;
         return Objects.equals(cpf, cliente.cpf);
     }
+
+    @Override
+    public int hashCode(){
+        return Objects.hash(cpf);
+    }
 }
