@@ -41,10 +41,10 @@ public class Ingressos {
     }
 
     public void verificarPeriodoParaAdquirirIngressos() throws PeriodoVendaIngressosException {
-        LocalDateTime dataAtual = LocalDateTime.now().plusDays(2);
+        LocalDateTime dataAtual = LocalDateTime.now().plusDays(1);
 
         if(this.dataAberturaParaAdquirirIngresso == null || this.dataEncerramentoParaAdquirirIngresso == null){
-            throw new PeriodoVendaIngressosException("perído de venda de ingressos não foi definido.");
+            throw new PeriodoVendaIngressosException("período de venda de ingressos não foi definido.");
         }
 
         if(dataAtual.isBefore(dataAberturaParaAdquirirIngresso)){
